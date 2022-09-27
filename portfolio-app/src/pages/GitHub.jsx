@@ -3,8 +3,9 @@ import React, {useState, useEffect} from 'react'
 import axios from "axios";
 export default function GitHub() {
 
-    const octokit = new Octokit({ auth: "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" });
-    const [user,setUser] = useState("")
+    const octokit = new Octokit({ auth: "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" });
+    const [user,setUser] = useState([])
+    console.log("hey")
     useEffect(() => {
         const init = async () =>{
             // const {data } = await octokit.rest.users.getAuthenticated();
@@ -12,10 +13,8 @@ export default function GitHub() {
             // console.log("Hello, %s", JSON.stringify(data , null, 4));
             const userInfo = []
             for (let i in data){
-                console.log(data[i].languages_url)
-                const res = await axios.get(data[i].languages_url)
-                console.log(res)
-                userInfo.push(<li>{data[i].name}, {res.data}</li>)
+                // const res = await axios.get(data[i].languages_url)
+                userInfo.push(<li>{data[i].name}</li>)
 
             }
             // const json_getAllKeys = data => (
@@ -26,7 +25,7 @@ export default function GitHub() {
             //     ), [])
             // )
             // const json = JSON.parse(data.reduce)
-            console.log(data)
+            console.log(userInfo)
             // for (let info in data){
             //     for(let key in data[info]){
             //         if (data[info][key] != Object)
@@ -45,7 +44,7 @@ export default function GitHub() {
     return (
         <>
             <h1>Hello </h1>
-            <p>{user}</p>
+            <ol>{user}</ol>
         </>
         
     )
