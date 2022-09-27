@@ -1,9 +1,10 @@
 import { Octokit, App } from "octokit";
 import React, {useState, useEffect} from 'react'
 import axios from "axios";
+
 export default function GitHub() {
 
-    const octokit = new Octokit({ auth: "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" });
+    const octokit = new Octokit({ auth: process.env.gh_personal_access_token });
     const [user,setUser] = useState([])
     console.log("hey")
     useEffect(() => {
