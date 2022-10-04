@@ -1,3 +1,29 @@
 .content{
     display: flex;
+    width: 100%;
 }
+#projects{
+    position: sticky;
+}
+.container{
+    display: flex;
+    /* width: 100%; */
+    flex-wrap: wrap;
+    flex-shrink: 3;
+    /* overflow: hidden; */
+    /* align-items: center; */
+}
+.container > div{
+    margin: 2em;
+    background-color: bisque;
+    border-radius: 1em;
+    padding: 2em;
+    border: .1em solid black;
+    
+}
+
+.container > div > p{
+    color: brown;
+    text-align: center;
+}
+

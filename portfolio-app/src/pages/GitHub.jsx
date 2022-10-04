@@ -1,7 +1,7 @@
 import { Octokit, App } from "octokit";
 import React, {useState, useEffect} from 'react'
 import axios from "axios";
-
+import "./GitHub.css"
 export default function GitHub() {
 
     const octokit = new Octokit({ auth: process.env.gh_personal_access_token });
@@ -11,13 +11,14 @@ export default function GitHub() {
         const init = async () =>{
             // const {data } = await octokit.rest.users.getAuthenticated();
             const {data} = await octokit.rest.repos.listForUser({username: "BenFSaks"})
-            // console.log("Hello, %s", JSON.stringify(data , null, 4));
+            console.log("Hello, %s", JSON.stringify(data , null, 4));
             const userInfo = []
             for (let i in data){
                 // const res = await axios.get(data[i].languages_url)
-                userInfo.push(<li>{data[i].name}</li>)
-
+                userInfo.push(data[i].name)
+                // userInfo.push(<div className="project-card"><h1 >{data[i].name}</h1></div>)
             }
+            setUser(userInfo)
             // const json_getAllKeys = data => (
             // data.reduce((keys, obj) => (
             //         keys.concat(Object.keys(obj).filter(key => (
@@ -36,16 +37,31 @@ export default function GitHub() {
             //     }
             // }
 
-            setUser(userInfo)
             
 
         }
         init()
     }, [])
+    const listItems = user.map((item) =>{
+        <li>{item}</li>
+    })
     return (
         <>
-            <h1>Hello </h1>
-            <ol>{user}</ol>
+            
+            <div className="container">
+                {user.map((project) =>{
+                    return(
+                        <div >
+                            <p>{project}</p>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    )
+
+                })}
+
+            </div>
+            {/* <h1>Hello </h1> */}
+            {/* <ol>{listItems}</ol> */}
         </>
         
     )

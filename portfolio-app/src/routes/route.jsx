@@ -46,7 +46,7 @@ export default function Nav() {
           </ul>
         </nav>
       </div>
-      <div id="detail"></div>
+      {/* <div id="detail"></div> */}
     </>
   );
 }

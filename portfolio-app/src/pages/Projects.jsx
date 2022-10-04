@@ -7,7 +7,6 @@ export default function Projects() {
   return (
     <div class="content">
         <Nav></Nav>
-        <h1>Hello World</h1>
         <GitHub></GitHub>
     </div>
   )
