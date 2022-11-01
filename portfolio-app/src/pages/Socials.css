@@ -1,0 +1,12 @@
+.content{
+    display: flex;
+}
+.images {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+}
+img {
+    width: 10em;
+    height: 10em;
+}

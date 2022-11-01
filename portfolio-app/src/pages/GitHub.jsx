@@ -47,7 +47,6 @@ export default function GitHub() {
                     for (let i in lang[indx]){
                         total += lang[indx][i]
                     }
-                    console.log("total" + total)
                     let langList = ""
                     for (let i in lang[indx]){
                         let perc = Math.floor((lang[indx][i] / total) * 100)

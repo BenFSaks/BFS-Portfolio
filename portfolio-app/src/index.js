@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import Root from './routes/route';
 import Projects from './pages/Projects';
+import Socials from './pages/Socials';
+import Club from './pages/Club';
 import ErrorPage from "./error-page";
 
 import {
@@ -25,12 +27,12 @@ const router = createBrowserRouter([
   },
   {
     path: "/club",
-    element: <Root/>,
+    element: <Club/>,
     errorElement: <ErrorPage/>
   },
   {
     path: "/socials",
-    element: <Root/>,
+    element: <Socials/>,
     errorElement: <ErrorPage/>
   },
   {
