@@ -5,7 +5,7 @@ import logo from '../eleetcoderslogo.png'
 
 const Club = () => {
     return (
-        <div class="content">
+        <div class="club-content">
             <Nav></Nav>
             <div>
                 <img src={logo} alt="" />

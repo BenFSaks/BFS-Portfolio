@@ -1,12 +1,12 @@
-.content {
+.club-content {
     display: flex;
     width: 100%;
 }
-.content > div {
+.club-content > div {
     display: flex;
     flex-direction: column;
 }
-.content > div > img {
+.club-content > div > img {
     width: 40%;
     /* display: block; */
     margin-left: auto;

@@ -1,12 +1,12 @@
 import { Octokit, App } from "octokit";
 import React, {useState, useEffect} from 'react'
 import axios from "axios";
-import "./GitHub.css"
 export default function GitHub() {
 
     const octokit = new Octokit({ auth: process.env.gh_personal_access_token });
     const [user,setUser] = useState([])
     const [lang,setLanguage] = useState([])
+    const [loading, setLoading] = useState(true)
     useEffect(() => {
         const init = async () =>{
             // const {data } = await octokit.rest.users.getAuthenticated();
@@ -28,6 +28,7 @@ export default function GitHub() {
             }
             setLanguage(languageInfo)
             setUser(userInfo)
+            setLoading(false)
 
             
 
@@ -41,7 +42,12 @@ export default function GitHub() {
         <>
             
             <div className="container">
-                {user.map((project, indx) =>{
+                {loading ? 
+                <div className="loader-container">
+                    <div className="spinner"></div>
+                </div>
+                
+                : user.map((project, indx) =>{
 
                     let total = 0
                     for (let i in lang[indx]){
@@ -71,7 +77,6 @@ export default function GitHub() {
                             <div>
                                 {langList}
                             </div>
-
                         </div>
                     )
 
