@@ -4,6 +4,7 @@ import './index.css';
 import Root from './routes/route';
 import Projects from './pages/Projects';
 import Socials from './pages/Socials';
+import Resume from './pages/Resume';
 import Club from './pages/Club';
 import ErrorPage from "./error-page";
 
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/resume",
-    element: <Root/>,
+    element: <Resume/>,
     errorElement: <ErrorPage/>
   },
   {
