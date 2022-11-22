@@ -1,24 +1,13 @@
 import React, {useState} from 'react';
-import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 import Nav from '../routes/route'
+import './res.css'
 
 
 const Resume = () => {
-    const [numPages, setNumPages] = useState(null);
-    const [pageNumber, setPageNumber] = useState(1);
-    function onDocumentLoadSuccess({ numPages }) {
-        setNumPages(numPages);
-
-    }
     return (
-        <div>
+        <div className="resume-content">
             <Nav></Nav>
-            <Document file="/resume.pdf" onLoadSuccess={onDocumentLoadSuccess}>
-                <Page renderAnnotationLayer={false} renderTextLayer={false} renderMode='svg' pageNumber={pageNumber} width="1000"></Page>
-            </Document>
-            <p>
-                Page {pageNumber} of {numPages}
-            </p>
+            <iframe src="https://drive.google.com/file/d/1243K6FgkMBUTld_Wxhqxqi0sK5bOzQW3/preview" width="640" height="480" allow="autoplay"></iframe>
             {/* <form action="">
                 <p htmlFor="Name"></p>
                 <input type="text" />

@@ -1,0 +1,13 @@
+body{
+    overflow: hidden;
+}
+.resume-content{
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+.resume-content > iframe{
+    flex-grow: 3;
+    height: 100%; 
+
+}
