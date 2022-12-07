@@ -1,11 +1,24 @@
 .socials-content{
     display: flex;
 }
-.images {
+.images > h1{
     
+    text-align: center;
     /* justify-content: space-around; */
 }
 img {
     width: 10em;
     height: 10em;
+}
+.images > div > a{
+    display: flex;
+    margin: 2em ;
+    background-color: blanchedalmond;
+}
+.images > div > a > p{
+    margin: 2em;
+}
+.images > div {
+    display: flex;
+    flex-direction: column;
 }

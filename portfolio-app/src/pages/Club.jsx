@@ -14,7 +14,7 @@ const Club = () => {
                     <div>
                         <a href="https://discord.gg/PdJxzCCP4e">Join the Discord Here</a>
                         <a href="https://www.linkedin.com/company/eleet-coders/">Follow us on linkedin</a>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis similique laboriosam perferendis vitae sunt, culpa provident impedit nulla nam, earum temporibus minus delectus ex! Aperiam odio minus reprehenderit corrupti officiis?</p>
+                        <p>I founded this club in Fall 2021 to better prepare New Paltz students for careers in tech. We practice interview problems, hold mock interviews, resume review, and provide a great place for students to have success.</p>
                     </div>
 
 

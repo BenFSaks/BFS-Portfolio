@@ -6,6 +6,7 @@ import Projects from './pages/Projects';
 import Socials from './pages/Socials';
 import Resume from './pages/Resume';
 import Club from './pages/Club';
+import Experience from './pages/Experience';
 import ErrorPage from "./error-page";
 
 import {
@@ -43,7 +44,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/experience",
-    element: <Root/>,
+    element: <Experience/>,
     errorElement: <ErrorPage/>
   },
 ])

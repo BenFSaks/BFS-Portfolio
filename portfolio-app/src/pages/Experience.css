@@ -1,0 +1,31 @@
+.experience-content{
+    display: flex;
+}
+.exp-page >  div{
+    background-color: rgb(231, 198, 157);
+    padding: 2em;
+    margin: 2em;
+}
+.exp-page > div > p > span{
+    font-weight: bold;
+}
+.exp-page > div > p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#techodet{
+    width: 65%;
+}
+.exp-page > div > form {
+    display: flex;
+    flex-direction: column;
+}
+.exp-page > div > form > div > input{
+    margin: 1em;
+}
+.exp-page > div > form > input{
+    margin: 1em;
+}
+.exp-page > div > form > input[type=button]:hover{
+    background-color: burlywood;
+    
+}
